@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android1_homeWork2</string>
+    <string name="Welcome">Добро пожаловать!</string>
+    <string name="welcome2">Выполните вход или зарегестрируйтесь</string>
+    <string name="email">Введите вашу почту</string>
+    <string name="password">Введите пароль</string>
+    <string name="open">Войти</string>
+    <string name="reset_password">Забыли пароль?</string>
+    <string name="click_here">Нажмите сюда</string>
+    <string name="sign_in">Вход</string>
+</resources>
