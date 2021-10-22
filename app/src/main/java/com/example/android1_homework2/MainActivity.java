@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etPassword;
     private ConstraintLayout clContent;
     private Toolbar toolbar;
-
+    private Button btn_reset;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
         btnOpen = findViewById(R.id.btn_open);
         clContent = findViewById(R.id.cl_content);
         toolbar = findViewById(R.id.toolbar);
+        btn_reset = findViewById(R.id.btn_reset);
+
+
+        btn_reset.setOnClickListener(v -> {
+            if (etEmail.getText().toString().equals("") && etPassword.getText().toString().equals("")){
+                Toast.makeText(this,"Ваш логин admin@gmail.com и пароль admin", Toast.LENGTH_SHORT).show();
+            }
+                }
+        );
+
 
         btnOpen.setOnClickListener(v -> {
             if (etEmail.getText().toString().equals("admin@gmail.com") && etPassword.getText().toString().equals("admin")) {
@@ -40,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Неправильный логин и пароль", Toast.LENGTH_SHORT).show();
             }
+
         });
 
         etEmail.addTextChangedListener(new TextWatcher() {
